@@ -47,8 +47,8 @@ public class Paciente {
             this.telefone = dados.telefone();
         }
 
-        if (dados.enderco() != null) {
-            this.endereco.atualizarInformacoes(dados.enderco());
+        if(dados.endereco() != null){
+            this.endereco.atualizarInformacoes(dados.endereco());
         }
     }
 
