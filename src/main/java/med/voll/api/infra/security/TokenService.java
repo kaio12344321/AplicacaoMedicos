@@ -26,7 +26,7 @@ public class TokenService {
                     .withIssuer("API Voll.med")
                     .withSubject(usuario.getLogin())
                     //.withClaim("id", usuario.getId())
-                    //.withExpiresAt(dataExpiracao())
+                    .withExpiresAt(dataExpiracao())
                     .sign(algoritmo);
         } catch (JWTCreationException exception){
             throw new RuntimeException("Erro ao gerar token jwt", exception);
