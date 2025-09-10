@@ -7,7 +7,6 @@ import med.voll.api.domain.medico.MedicoRepository;
 import med.voll.api.domain.paciente.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -69,4 +68,8 @@ public class AgendaDeConsultas {
 
         return medicoRepository.escolherMedicoAleatorioLivreNaData(dados.especialidade() , dados.data());
     }
+
+    public static record DadosAtualizacao(
+       String login,
+       String senha) {}
 }
